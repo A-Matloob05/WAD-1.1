@@ -1,28 +1,69 @@
 html, body {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
+    
+}
+
+.homecenter {
+    text-align: center;
 }
 
 main {
     flex: 1;
     padding: 20px;
+    
 }
-header {
-    background-color: rgb(12, 164, 224);
-    padding: 1rem;
-    text-align: left;
-    margin: 0%;
 
+.maincenter {
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(12, 164, 224);
+    color: white;
+
+}
+
+.linkedin-link {
+    color: #0077B5; 
+    font-size: 45px;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.linkedin-link:hover {
+    color: #00669E; 
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 footer {
         background-color: rgb(12, 164, 224);
-        padding: 25px;
-        text-align: end;
-        font-size: 25px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.25em;
         color: white;
         
     }
@@ -30,27 +71,36 @@ footer {
 nav ul {
     padding: 0%;
     margin: 0%;
+    text-align: center;
     list-style-type:none;
     overflow: hidden;
     background-color: rgb(12, 164, 224);
     position: fixed;
     top: 0%;
     width: 100%;
+    display: flex;
+    justify-content: center;
 } 
 
 nav li {
-    float: left;
+    float: none;
+    
 }
 
 nav li a {
     background-color: rgb(12, 164, 224);
+    text-align: center;
     color: white;
-    display: block;
+    display: inline-block;
     padding: 1em;
     text-decoration: none;
 }
 
-nav li a:hover {
-    background-color: rgb(12, 164, 224);
-    color: red;
+nav a:hover, nav a:focus {
+    background-color: white;
+    color: rgb(12, 164, 224);
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+
 }
