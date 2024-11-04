@@ -8,6 +8,75 @@ html, body {
     
 }
 
+.contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #444;
+}
+
 .homecenter {
     text-align: center;
 }
@@ -27,7 +96,7 @@ nav {
     text-align: center;
     padding: 10px;
     margin: 0;
-    background-color: rgb(12, 164, 224);
+    background-color: rgb(0, 0, 0);
     color: white;
 
 }
@@ -60,7 +129,7 @@ nav {
 }
 
 footer {
-        background-color: rgb(12, 164, 224);
+        background-color: rgb(0, 0, 0);
         padding: 10px;
         text-align: center;
         font-size: 1.25em;
@@ -74,7 +143,7 @@ nav ul {
     text-align: center;
     list-style-type:none;
     overflow: hidden;
-    background-color: rgb(12, 164, 224);
+    background-color: rgb(0, 0, 0);
     position: fixed;
     top: 0%;
     width: 100%;
@@ -88,7 +157,7 @@ nav li {
 }
 
 nav li a {
-    background-color: rgb(12, 164, 224);
+    background-color: rgb(0, 0, 0);
     text-align: center;
     color: white;
     display: inline-block;
@@ -98,9 +167,152 @@ nav li a {
 
 nav a:hover, nav a:focus {
     background-color: white;
-    color: rgb(12, 164, 224);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     outline: none;
     text-decoration: none;
 
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.about-section p {
+    line-height: 1.6;
+    color: #444;
+}
+
+.traits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.trait {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    color: #444;
+}
+
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.interest {
+    background: #f8f9fa;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #444;
+}
+
+.interest i {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .traits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .interests-grid {
+        flex-direction: column;
+    }
+    
+    .interest {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.home-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section {
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.typewriter {
+    margin-bottom: 2rem;
+}
+
+.role {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+    border-right: 2px solid #666;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typewriter Animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #666 }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .role {
+        font-size: 1.2rem;
+    }
 }
