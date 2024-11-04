@@ -46,13 +46,29 @@
          </div>
 
          
-         <form class="contact-form">
+         <div class="contact-form">
             <h3>Send me a message</h3>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-         </form>
+            <form action="https://formspree.io/f/mqakpvdk" method="POST">
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your Name" 
+                    required
+                >
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Your Email" 
+                    required
+                >
+                <textarea 
+                    name="message" 
+                    placeholder="Your Message" 
+                    required
+                ></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+         </div>
       </div>
    </div>
 
@@ -88,17 +104,18 @@
    
    
    <footer>
-      <a href="https://www.linkedin.com/in/alimatioob/">
-      <i class="fa-brands fa-linkedin"></i>
-      <span class="sr-only">LinkedIn</span>
-      </a>
-      <br>
-
-        <p>
-         © 2024 Ali Matloob | All rights reserved.
-        </p>
-      
-    </footer>
+      <div class="social-links">
+          <a href="https://www.linkedin.com/in/alimatioob/">
+              <i class="fa-brands fa-linkedin"></i>
+              <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/">
+              <i class="fa-brands fa-instagram"></i>
+              <span class="sr-only">Instagram</span>
+          </a>
+      </div>
+      <p>© 2024 Ali Matloob | All rights reserved.</p>
+  </footer>
 
 
 
